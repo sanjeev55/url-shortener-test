@@ -10,6 +10,8 @@ HelperClass
 The main logic behind the conversion from Full to short url is based on "Base Conversion", which means, the "id" (associated with the full URL) i.e is base10 number is converted to base62 characters which eventually will be used as the shortened URL. 
 And for the reverse implementation, since all the shortURl and FullURl is maintained in "shortUrlLIst", i simply searched the hashmap using the shortURL to obtain the stored Full URL.
 
+**The output is printed in the console. **
+
 As for the bonus task, i opted to not attempt it because of the time limitation i have. 
 
 
