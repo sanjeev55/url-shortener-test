@@ -3,34 +3,37 @@ package com.github.vivyteam.url.api.database;
 import java.util.LinkedHashMap;
 
 public class HelperClass {
-    static LinkedHashMap<Integer, String> fullUrlList = new LinkedHashMap<>();
-    static LinkedHashMap <String, String> shortUrlLIst = new LinkedHashMap<>();
+    static LinkedHashMap<Integer, String> fullUrlList = new LinkedHashMap<>(); //store id and full url
+    static LinkedHashMap <String, String> shortUrlList = new LinkedHashMap<>();// store full url and short url
 
-    public boolean checkURL (String url){
+    public boolean checkURL (String url){// check if URL already exists
         return fullUrlList.containsValue(url);
     }
 
-    public int addURL (String url){
+    public int addURL (String url){// add the full url to the hashmap and return id to apply the shortening algorithm
 
-        int id = fullUrlList.size() + 1;
+        int id = fullUrlList.size() + 1; //increment the value of id for each new entry
         fullUrlList.put(id, url);
 
         return id;
+
     }
-    public String getFullURL (String shortURL){
+    public String getFullURL (String shortURL){ //method to check if the fullURL for the requested shortURL exists
         String fullURL = null;
-        for (String key : shortUrlLIst.keySet()){
-            String value = shortUrlLIst.get(key);
+        for (String key : shortUrlList.keySet()){
+            String value = shortUrlList.get(key);
             if (value.equals(shortURL)){
                 fullURL = key;
             }
         }
         return fullURL;
     }
+
     public String getShortURL (String url){
-        return shortUrlLIst.get(url);
+        return shortUrlList.get(url);
     }
+
     public void addShortURL(String fullURL, String shortURL){
-        shortUrlLIst.put(fullURL,shortURL);
+        shortUrlList.put(fullURL,shortURL);
     }
 }
