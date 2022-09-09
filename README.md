@@ -15,7 +15,7 @@ And for the reverse implementation, since all the shortURl and FullURl is mainta
 
 **The output is printed in the console. **
 
-As for the bonus task, i opted to not attempt it because of the time limitation i have. 
+As for the bonus task, i opted to not attempt it because of the time limitation.
 
 
 
