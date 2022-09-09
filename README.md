@@ -2,6 +2,9 @@
 For the given task following assumption was made:
 - URL could be of any type
 
+For the database:
+- i opted not to connect to any database and maintain static hashmaps instead. 
+
 Following classes were added:
 HelperClass
 - This class was created to handle the operation related to the indexing and storage of fullURL and shortURL. 
