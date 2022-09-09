@@ -1,4 +1,4 @@
-# Implementationd Details
+# Implementation Details
 For the given task following assumption was made:
 - URL could be of any type
 
