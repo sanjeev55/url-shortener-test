@@ -3,8 +3,8 @@ package com.github.vivyteam.url.api.database;
 import java.util.LinkedHashMap;
 
 public class HelperClass {
-    static LinkedHashMap<Integer, String> fullUrlList = new LinkedHashMap<>(); //store id and full url
-    static LinkedHashMap <String, String> shortUrlList = new LinkedHashMap<>();// store full url and short url
+    public static LinkedHashMap<Integer, String> fullUrlList = new LinkedHashMap<>(); //store id and full url
+    public static LinkedHashMap <String, String> shortUrlList = new LinkedHashMap<>();// store full url and short url
 
     public boolean checkURL (String url){// check if URL already exists
         return fullUrlList.containsValue(url);
